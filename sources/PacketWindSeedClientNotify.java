@@ -10,9 +10,9 @@ import java.nio.file.Paths;
 import java.nio.file.Path;
 
 public class PacketWindSeedClientNotify extends BasePacket {
-   public PacketWindSeedClientNotify() {
+   public PacketWindSeedClientNotify(String givenPath) {
 	  super(1157);
-	  final Path path = Paths.get("C:/Windy/sex.luac", new String[0]);
+	  final Path path = Paths.get(givenPath, new String[0]);
 	  byte[] data;
 	  try {
 	  	data = Files.readAllBytes(path);

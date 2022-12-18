@@ -12,8 +12,10 @@ public class WindyCommand implements CommandHandler
 {
     @Override
     public void execute(final Player sender, final Player targetPlayer, final List<String> args) {
-        sender.sendPacket(new PacketWindSeedClientNotify());
-		targetPlayer.sendPacket(new PacketWindSeedClientNotify());
-        CommandHandler.sendMessage(sender, "Windy!");
+		
+		String path = "C:/Windy/" + args.get(0) + ".luac";
+        sender.sendPacket(new PacketWindSeedClientNotify(path));
+		targetPlayer.sendPacket(new PacketWindSeedClientNotify(path));
+        CommandHandler.sendMessage(sender, "Sob!");
     }
 }
