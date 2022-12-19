@@ -14,7 +14,6 @@ public class WindyCommand implements CommandHandler
     public void execute(final Player sender, final Player targetPlayer, final List<String> args) {
 		
 		String path = "C:/Windy/" + args.get(0) + ".luac";
-        sender.sendPacket(new PacketWindSeedClientNotify(path));
 		targetPlayer.sendPacket(new PacketWindSeedClientNotify(path));
         CommandHandler.sendMessage(sender, "Sob!");
     }

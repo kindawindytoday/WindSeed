@@ -70,7 +70,7 @@ local function booba2()
             --Make new boobs container
             booba = CS.UnityEngine.GameObject("Booba")
             booba.transform.parent = boob_parent.transform
-            booba.transform.localScale = CS.UnityEngine.Vector3(1, 1, 1)
+            booba.transform.localScale = CS.UnityEngine.Vector3(-1, -1, -1)
             booba.transform.rotation = boob_parent.transform.rotation
             booba.transform.position = boob_parent.transform.position
 
@@ -89,4 +89,4 @@ local function onError(error)
 	CS.MoleMole.ActorUtils.ShowMessage(tostring(error))
 end
 
-xpcall(update, onError)
+xpcall(booba2, onError)
