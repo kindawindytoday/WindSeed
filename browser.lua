@@ -36,7 +36,7 @@ local function createPrimitive()
     local position = nowBody.transform.position
     primitive.transform.position = CS.UnityEngine.Vector3(position.x, position.y + 5, position.z);
     local browser = primitive:AddComponent(typeof(CS.ZenFulcrum.EmbeddedBrowser.Browser));
-    browser._url = "https://www.youtube.com/watch?v=AqYsbttfgaQ";
+    browser._url = "https:\\google.com";
     browser._width = 1920;
     browser._height = 1080;
 end
