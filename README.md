@@ -1,10 +1,13 @@
-# SobSeed
-omg owo some stuff for certain sussy sob lua framework
-there are sources and batch of script; thanks besties DiXiao#6611 and yarik0chka#3602 for scripts
+# WindSeed
+Some stuff for certain XLua framework;
+there are sources and batch of scripts.
 
-# for scripts 
-just place ur script to C:/Windy/*.luac, and /w  <luac name without .luac> 
-for making scripts just take ur .lua, drag to special luac.exe, rename and here you are
+# Scripts
+Place your script to C:/Windy/*.luac, and /w  <luac name without .luac> ;
 
-# for implementing dat sobseed
-take that files in sources and just change it at correct paths in ur gc src u stupid ass
+For compiling scripts just take your .lua, drag to special luac.exe, rename and here you are
+(there may be some issues, like some scripts won't work, create an issue then or write us then)
+
+# Implementing (2 ways)
+1) Take that files in sources, change it at correct paths in your grasscutter server and recompile it. (Current proto version is 3.3.50, you can always just download new one and change)
+2) Use pre-made special server - gingerPS or SobPS
