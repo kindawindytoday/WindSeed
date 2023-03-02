@@ -8,5 +8,5 @@ For compiling scripts just take your .lua, drag to special luac.exe, rename and 
 (there may be some issues, like some scripts won't work, create an issue then or write us then)
 
 # Implementing (2 ways)
-1) Take that files in sources, change it at correct paths in your grasscutter server and recompile it. (Current proto version is 3.4, you can always just download new one and change)
+1) Take that files in sources, change it at correct paths in your grasscutter server and recompile it. (Current proto version is 3.5, you can always just download new one and change)
 2) Use any pre-made special server, for example [gingerPS](https://github.com/mintygingy/gingerps)
