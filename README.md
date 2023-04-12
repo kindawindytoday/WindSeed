@@ -9,4 +9,10 @@ For compiling scripts just take your .lua, drag to special luac.exe, rename and 
 
 # Implementing (2 ways)
 1) Take that files in sources, change it at correct paths in your grasscutter server and recompile it. (Current proto version is 3.6, you can always just download new one and change)
-2) Use any pre-made special server, for example [gingerPS](https://github.com/mintygingy/gingerps)
+2) Add those lines to PacketOpCodes.java:
+```java
+	public static final int WindSeedType1Notify = 23435;
+	public static final int WindSeedType2Notify = 24656;
+	public static final int WindSeedType3Notify = 22438;
+```
+3) Use any pre-made special server, for example [gingerPS](https://github.com/mintygingy/gingerps)
