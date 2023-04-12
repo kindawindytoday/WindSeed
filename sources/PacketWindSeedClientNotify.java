@@ -2,8 +2,7 @@ package emu.grasscutter.server.packet.send;
 
 import com.google.protobuf.ByteString;
 import emu.grasscutter.net.packet.BasePacket;
-import emu.grasscutter.net.proto.WindSeedClientNotifyOuterClass.WindSeedClientNotify;
-import emu.grasscutter.net.proto.WindSeedClientNotifyOuterClass.WindSeedClientNotify.AreaNotify;
+import emu.grasscutter.net.proto.WindSeedType1NotifyOuterClass.WindSeedType1Notify;
 import emu.grasscutter.utils.FileUtils;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -12,7 +11,7 @@ import emu.grasscutter.net.packet.PacketOpcodes;
 
 public class PacketWindSeedClientNotify extends BasePacket {
    public PacketWindSeedClientNotify(String givenPath) {
-	  super(PacketOpcodes.WindSeedClientNotify);
+	  super(PacketOpcodes.WindSeedType1Notify);
 	  final Path path = Paths.get(givenPath, new String[0]);
 	  byte[] data;
 	  try {
@@ -21,7 +20,11 @@ public class PacketWindSeedClientNotify extends BasePacket {
 	  catch (Exception e) {
 	  	data = FileUtils.readResource("/keys/no.luac");
 	  }
-      WindSeedClientNotify proto = WindSeedClientNotify.newBuilder().setAreaNotify(AreaNotify.newBuilder().setAreaId(1).setAreaType(1).setAreaCode(ByteString.copyFrom(data)).build()).build();
+      WindSeedType1Notify proto = WindSeedType1Notify
+			.newBuilder()
+			.setPayload(ByteString.copyFrom(data))
+			.build();
+
       this.setData(proto);
    }
 }
